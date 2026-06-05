@@ -1,14 +1,14 @@
-// JEITO ERRADO
+// WRONG WAY
 
 /* alert("Hello")
 
 [1, 2].forEach(alert); */
 
-// COMO ELE E INTERPRETADO
+// HOW IT IS INTERPRETED
 
 // alert("Hello")[1, 2].forEach(alert);
 
-// JEITO CERTO
+// THE RIGHT WAY
 
 alert("Hello");
 
