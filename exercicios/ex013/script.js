@@ -1,1 +1,1 @@
-
+var message = 'Hello';
