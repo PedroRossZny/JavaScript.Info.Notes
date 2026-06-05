@@ -1,1 +1,1 @@
-alert('Meu nome e Pedro!');
+alert('My name is Pedro!');
