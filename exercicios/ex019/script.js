@@ -1,0 +1,15 @@
+const myBirthday = '18.04.1982';
+
+// myBirthday = '01.01.2001';
+// error, can't reassign the constant!
+
+const COLOR_RED = "#F00";
+const COLOR_GREEN = "#0F0";
+const COLOR_BLUE = "00F";
+const COLOR_ORANGE = "FF7F00";
+
+// ...when we nede to pick a color
+let color = COLOR_ORANGE;
+alert(color); // #FF7F00
+
+const pageLoadTime = /* time taken by a webpage to load */;
