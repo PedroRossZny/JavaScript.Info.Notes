@@ -12,4 +12,4 @@ const COLOR_ORANGE = "FF7F00";
 let color = COLOR_ORANGE;
 alert(color); // #FF7F00
 
-const pageLoadTime = /* time taken by a webpage to load */;
+// const pageLoadTime = /* time taken by a webpage to load */;
