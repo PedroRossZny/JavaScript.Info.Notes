@@ -1,3 +1,4 @@
+/*
 "" + 1 + 0 // "10"
 "" - 1 + 0 // -1
 true + false // 1
@@ -12,3 +13,4 @@ true + false // 1
 null + 1 // 1
 undefined + 1 // NaN
 " \t \n" - 2 // -2
+*/
