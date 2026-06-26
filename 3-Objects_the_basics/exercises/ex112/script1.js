@@ -1,0 +1,8 @@
+// these properties are all right
+let obj = {
+    for: 1,
+    let: 2,
+    return: 3
+};
+
+alert( obj.for + obj.let + obj.return ); // 6
