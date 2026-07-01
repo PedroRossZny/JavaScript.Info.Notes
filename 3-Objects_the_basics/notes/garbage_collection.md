@@ -25,7 +25,7 @@ let user = {
 };
 ```
 
-<img src="../images/garbage-collection-1.png" alt="First Garbage Collection Image">
+<img src="../images/Garbage_Collection/garbage-collection-1.png" alt="First Garbage Collection Image">
 
 Here the global variable `user` references the object `{name: "John"}`. If the value of
 `user` is overwritten, the reference will be lost:
@@ -34,7 +34,7 @@ Here the global variable `user` references the object `{name: "John"}`. If the v
 user = null;
 ```
 
-<img src="../images/garbage-collection-2.png" alt="Second Garbage Collection Image">
+<img src="../images/Garbage_Collection/garbage-collection-2.png" alt="Second Garbage Collection Image">
 
 John becomes unreachable, so the garbage collector removes him from memory.
 
@@ -53,7 +53,7 @@ let user = {
 let admin = user;
 ```
 
-<img src="../images/garbage-collection-3.png" alt="Third Garbage Collection Image">
+<img src="../images/Garbage_Collection/garbage-collection-3.png" alt="Third Garbage Collection Image">
 
 If we do the same as before, the object will still be reachable through `admin`.
 
@@ -79,7 +79,7 @@ let family = marry({
 });
 ```
 
-<img src="../images/garbage-collection-4.png" alt="Fourth Garbage Collection Image">
+<img src="../images/Garbage_Collection/garbage-collection-4.png" alt="Fourth Garbage Collection Image">
 
 At this point all objects are reachable. But if we remove two references:
 
@@ -88,16 +88,16 @@ delete family.father;
 delete family.mother.husband;
 ```
 
-<img src="../images/garbage-collection-5.png" alt="Fifth Garbage Collection Image">
+<img src="../images/Garbage_Collection/garbage-collection-5.png" alt="Fifth Garbage Collection Image">
 
 We can now see that John has no incoming references. Outgoing references do not matter —
 only incoming references make an object reachable:
 
-<img src="../images/garbage-collection-6.png" alt="Sixth Garbage Collection Image">
+<img src="../images/Garbage_Collection/garbage-collection-6.png" alt="Sixth Garbage Collection Image">
 
 After garbage collection:
 
-<img src="../images/garbage-collection-7.png" alt="Seventh Garbage Collection Image">
+<img src="../images/Garbage_Collection/garbage-collection-7.png" alt="Seventh Garbage Collection Image">
 
 ---
 
@@ -106,7 +106,7 @@ After garbage collection:
 We can make an entire island of interlinked objects unreachable. Using the same object as
 before, if `family` is overwritten with `null`, the memory image becomes:
 
-<img src="../images/garbage-collection-8.png" alt="Eighth Garbage Collection Image">
+<img src="../images/Garbage_Collection/garbage-collection-8.png" alt="Eighth Garbage Collection Image">
 
 Even though John and Ann are still linked to each other, the `family` object has been
 disconnected from the root. Because of this, the entire island becomes unreachable and
@@ -126,23 +126,23 @@ We can illustrate this entire process:
 
 Here we start with our initial structure, where an unreachable island is clearly visible:
 
-<img src="../images/garbage-collection-9.png" alt="Ninth Garbage Collection Image">
+<img src="../images/Garbage_Collection/garbage-collection-9.png" alt="Ninth Garbage Collection Image">
 
 First the roots are marked:
 
-<img src="../images/garbage-collection-10.png" alt="Tenth Garbage Collection Image">
+<img src="../images/Garbage_Collection/garbage-collection-10.png" alt="Tenth Garbage Collection Image">
 
 Then their references are followed and the referenced objects are marked:
 
-<img src="../images/garbage-collection-11.png" alt="Eleventh Garbage Collection Image">
+<img src="../images/Garbage_Collection/garbage-collection-11.png" alt="Eleventh Garbage Collection Image">
 
 We continue following their references:
 
-<img src="../images/garbage-collection-12.png" alt="Twelfth Garbage Collection Image">
+<img src="../images/Garbage_Collection/garbage-collection-12.png" alt="Twelfth Garbage Collection Image">
 
 Now the objects that were not visited are considered unreachable and will be removed:
 
-<img src="../images/garbage-collection-13.png" alt="Thirteenth Garbage Collection Image">
+<img src="../images/Garbage_Collection/garbage-collection-13.png" alt="Thirteenth Garbage Collection Image">
 
 That is the core concept of how it all works. JavaScript engines apply many optimizations
 to make the code run faster and avoid introducing delays. Some of those optimizations are:
