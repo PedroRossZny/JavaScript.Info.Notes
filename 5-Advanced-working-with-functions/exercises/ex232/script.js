@@ -1,0 +1,28 @@
+alert( Math.max(3, 5, 1) ); // 5
+
+let arr = [3, 5, 1];
+
+alert( Math.max(arr) ); // NaN
+
+alert( Math.max(...arr) ); // 5 (spread turns array into a list of arguments)
+
+let arr1 = [1, -2, 3, 4];
+let arr2 = [8, 3, -8, 1];
+
+alert( Math.max(...arr1, ...arr2) ); // 8
+
+alert( Math.max(1, ...arr1, 2, ...arr2, 25) ); // 25
+
+arr = [3, 5, 1];
+arr2 = [8, 9, 15];
+
+let merged = [0, ...arr, 2, ...arr2];
+
+alert(merged); // 0,3,5,1,2,8,9,15 (0, then arr, then 2, then arr2)
+
+let str = "Hello";
+
+alert( [...str] ); // H,e,l,l,o
+
+// Array.from converts an iterable into an array
+alert( Array.from(str) ); // H,e,l,l,o
